@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace IrgendwasMitMathematikRechnenUndJaIchHabeAuchManchmalBockAufMathe
 {
-    public partial class Form1 : Form
+    public partial class Eingabe : Form
     {
-        public Form1()
+        public Eingabe()
         {
             InitializeComponent();
+        }
+
+
+        private void btAusgabe_Click(object sender, EventArgs e)
+        {
+            Ausgabe ausgabe = new Ausgabe();
+                ausgabe.rechenoperation = cbEingabe.Text;
+            ausgabe.Show();
         }
     }
 }
